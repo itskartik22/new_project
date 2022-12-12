@@ -8,9 +8,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    /* background-position: center; */
+    background-position: center;
     /* background-color: bisque; */
-    height: 600px;
+    height: 100vh;
     width: 100%;
     /* background-color: bisque; */
 }
