@@ -17,9 +17,10 @@
             <div class="nav-logo row-flex">
                 <img src="LogoIlustrator.png" alt="">
             </div>
-            <div  id="navid" class="nav-list row-flex">
+            <div id="navid" class="nav-list row-flex">
                 <ul id="nav-ul-id" class=" row-flex">
                     <img src="LogoIlustrator.png" alt="">
+                    <label id="sideClose" onclick="navSlide()" for=""><img src="./icons8-close-window-50.png" alt=""></label>
                     <li id="click active">Home</li>
                     <li>About</li>
                     <li>Timing</li>
@@ -29,7 +30,7 @@
                 <button id="search-icon" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
-                <label id="sideOpen" for=""><i class="fa-solid fa-bars"></i></label>
+                <label id="sideOpen" onclick="navSlide()" for=""><i class="fa-solid fa-bars"></i></label>
             </div>
         </nav>
     </div>
