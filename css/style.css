@@ -4,15 +4,18 @@
 }
 
 .main-container {
-    background-image: url(../3243642.jpg);
+    /* background-image: url(../3243642.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     /* background-color: bisque; */
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     /* background-color: bisque; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .flex-container {
@@ -29,14 +32,9 @@
     flex-direction: column;
 }
 
-.nav-bar {
-    width: 100%;
-    color: white;
-    margin: 20px 0px;
-}
 
 .nav-logo {
-    padding: 0px 7%;
+    padding: 0px 5%;
 }
 
 .nav-logo img {
@@ -44,9 +42,12 @@
 }
 
 .nav-bar {
+    width: 100%;
+    color: white;
+    margin: 20px 0px;
     padding: 0.4rem;
     background: #00000026;
-    align-self: flex-start;
+    /* align-self: flex-start; */
     justify-content: space-between;
     align-items: center;
 }
@@ -56,10 +57,12 @@
     color: white;
     /* padding: 15px; */
     width: 56%;
+    /* min-width: 585px; */
     border: 0px solid white;
     border-radius: 25px 0px 0px 25px;
-    background: linear-gradient(45deg, #fed809, #f418ab);
+    background: linear-gradient(45deg, #eeb6f3, #8c5eac);
     align-items: center;
+    margin-right: 1rem;
 }
 
 .nav-list ul {
@@ -79,7 +82,7 @@
     list-style: none;
     cursor: pointer;
     padding: 15px 5%;
-    height:1.4rem;
+    height: 1.4rem;
 }
 
 .nav-list label {
@@ -91,6 +94,7 @@
     color: rgb(252, 193, 0);
     background-color: white;
     border-radius: 50px;
+
     /* height: %; */
 }
 
@@ -129,9 +133,9 @@
         top: 0px;
         /* right: 0px; */
         left: var(--hide-nav);
-        background: linear-gradient(360deg, #e81a9bd9, #fdd309);
+        background: linear-gradient(45deg, #eeb6f3, #8b44bd);
         height: 100vh;
-        padding-top: 3rem;
+        padding-top: 0rem;
         justify-content: flex-start;
         align-items: center;
         width: 100%;
@@ -147,25 +151,28 @@
         margin-right: 1.5rem;
         justify-content: space-evenly;
         width: 35%;
+        min-width: 300px;
         background: transparent;
     }
 
     .nav-list ul img {
         display: flex;
-        width: 4.7rem;
-        margin-bottom: 2rem;
+        width: 4.5rem;
+        margin-bottom: 1rem;
         position: relative;
-        top: -20px;
+        top: 28px;
         /* align-items: flex-start; */
     }
 
     #sideClose {
         position: relative;
-        left: 40vw;
-        top: -88px;
+        left: 40.5vw;
+        top: -71px;
     }
-    #sideClose img{
-        width: 2.3rem;;
+
+    #sideClose img {
+        width: 2.3rem;
+        ;
     }
 
     .nav-list label {
@@ -181,13 +188,19 @@
 }
 
 /* Resposive for below 768px */
-@media (max-width: 768px){
-    .nav-logo img{
+@media (max-width: 768px) {
+    .nav-bar {
+        margin-bottom: 0px;
+    }
+
+    .nav-logo img {
         width: 3.9rem;
     }
-    .nav-list ul{
+
+    .nav-list ul {
         padding-top: 0rem;
     }
+
     .nav-list ul img {
         display: flex;
         width: 4rem;
@@ -196,18 +209,23 @@
         top: 30px;
         /* align-items: flex-start; */
     }
+
     #sideClose {
         position: relative;
         left: 40vw;
         top: -82px;
     }
+
     #sideClose img {
         width: 2rem;
     }
-    .nav-list{
-        width: 40%;
+
+    .nav-list {
+        width: 45%;
+        min-width: 0%;
         margin-right: 0rem;
     }
+
     .nav-list label {
         display: flex;
         font-size: 1.4rem;
@@ -220,15 +238,152 @@
 /* Responsive below width 480 */
 
 @media (max-width: 480px) {
+    .nav-list {
+        width: 20%;
+    }
+
     .nav-list input {
         width: 0%;
-        visibility: hidden;
+        display: none;
     }
-    .nav-list button{
-        visibility: hidden;
+
+    .nav-list button {
+        display: none;
     }
-    /* .nav-list input:hover {
-        /* min-width: 100%; */
-        visibility:visible;
-    } */
+
+}
+
+/* @media (min-height: 480px) {
+    .nav-list ul img {
+        display: flex;
+        width: 4rem;
+        margin-bottom: 1rem;
+        position: relative;
+        top: 30px;
+        align-items: flex-start;
+    }
+
+    .nav-list li {
+        list-style: none;
+        cursor: pointer;
+        padding: 10px 5%;
+        height: 1.4rem;
+        font-size: 1.2rem;
+    }
+    #sideClose {
+    position: relative;
+    left: 40vw;
+    top: -66px;
+}
+} */
+
+
+/* //Container -Below NavBAr */
+.submain-container1 {
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.submain-container1 img {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submain-text {
+    width: 35%;
+    padding: 1rem;
+    margin-left: 3rem;
+}
+
+.submain-text h1 {
+    font-size: 3.3rem;
+}
+
+.submain-text h1 span {
+    color: #252a71;
+}
+
+.submain-text p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+.submain-text a {
+    text-decoration: none;
+    background: linear-gradient(45deg, #8d6bab, transparent);
+    width: 35%;
+    padding: 8px;
+    font-size: 1.1rem;
+    margin: 0.5rem 0rem;
+    color: #252a71;
+}
+
+.submain-text a:hover {
+    color: white;
+}
+
+
+@media (max-width:1100px) {
+    .submain-text h1 {
+        font-size: 2.7rem;
+    }
+
+    .submain-text p {
+        font-size: 1.1rem;
+    }
+
+    .submain-text a {
+        font-size: 1.0rem;
+    }
+}
+
+@media (max-width:940px) {
+    .submain-text h1 {
+        font-size: 2.0rem;
+    }
+
+    .submain-text p {
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+        font-size: 1rem;
+        font-weight: 100;
+    }
+
+    .submain-text a {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width:768px) {
+    .submain-container1 {
+        flex-direction: column-reverse;
+    }
+
+    .submain-container1 img {
+        width: 75%;
+    }
+
+    .submain-text {
+        width: 50%;
+        padding: 0rem 1rem;
+        margin-left: 0rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .submain-text h1 {
+        font-size: 6vw;
+    }
+
+    .submain-text p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 2.8vw;
+        font-weight: 100;
+    }
 }
